@@ -198,6 +198,9 @@ body {
   margin-right: 30px;
   color: rgba(255, 255, 255, 0.5);
 }
+.legend-active {
+  color: #febe05; 
+}
 .legend svg {
   margin-right: 15px;
 }
