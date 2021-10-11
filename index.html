@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,6 +19,13 @@
                 <img src="img/logo.svg" alt="Logo">
             </a>
             <nav class="nav">
+                <button class="m-menu">
+                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="15" y2="0.5" stroke="white"/>
+                        <line y1="4.5" x2="15" y2="4.5" stroke="white"/>
+                        <line y1="8.5" x2="15" y2="8.5" stroke="white"/>
+                    </svg>                        
+                </button>
                 <ul class="menu">
                     <li class="menu-item">
                         <a href="#" class="menu-link">Главная</a>
@@ -68,7 +76,7 @@
                 <!-- /.film-details -->
             </div>
             <!-- /.film-info -->
-            <a href="#" class="film-trailer">
+            <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=z2X2HaTvkl8" href="#" class="film-trailer">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="50" fill="white" />
                     <g clip-path="url(#clip0)">
@@ -135,7 +143,7 @@
         <!-- /.session -->
     </header>
     <div class="scheme container">
-        <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="scheme-svg" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="light" d="M128 115L201.04 48H968.96L1042 115H128Z" fill="url(#paint0_linear)"/>
             <line x1="76" y1="43" x2="1094" y2="43" stroke="black" stroke-opacity="0.39" stroke-width="10"/>
             <path class="booked" d="M130 158.5C130 158.526 130.001 158.551 130.003 158.577C130.096 159.791 130.537 161.596 131.588 163.128C132.666 164.699 134.409 166 137 166H159.5C159.524 166 159.548 165.999 159.571 165.997C160.899 165.903 162.851 165.373 164.496 164.072C166.181 162.738 167.5 160.622 167.5 157.5V148H165.5V157.5C165.5 159.978 164.486 161.529 163.254 162.503C161.996 163.499 160.469 163.921 159.463 164H137C135.191 164 134.018 163.134 133.237 161.997C132.44 160.835 132.08 159.413 132 158.46V148H130V158.5ZM156.5 135H140.5C137.186 135 134.5 137.686 134.5 141V154C134.5 157.314 137.186 160 140.5 160H156.5C159.814 160 162.5 157.314 162.5 154V141C162.5 137.686 159.814 135 156.5 135Z"/>
@@ -338,6 +346,7 @@
         <a href="#" class="button button-pay">Перейти к оплате</a>
     </div>
     <!-- /.price -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
