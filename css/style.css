@@ -204,11 +204,13 @@ body {
   border-radius: 10px;
   overflow-x: auto;
 }
+
 .scheme-svg {
   max-width: 1170px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   margin: 0 20px;
 }
+
 .scheme path:not(.light) {
   fill: rgba(255, 255, 255, 0.2);
   cursor: pointer;
@@ -415,10 +417,12 @@ body {
   .price {
     flex-wrap: wrap;
   }
+
   .button {
     margin-top: 20px;
   }
 }
+
 @media (max-width: 285px) {
   .avatar {
     margin-left: 8px;
