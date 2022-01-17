@@ -16,4 +16,5 @@ schemeSvg.addEventListener("click", (event) => {
 
 menuButton.addEventListener("click", () => {
     menu.classList.toggle("is-open");
+    document.body.classList.toggle('overflow');
 });
