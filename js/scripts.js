@@ -2,6 +2,8 @@ const schemeSvg = document.querySelector(".scheme-svg");
 const totalPriceTag = document.querySelector(".price-total");
 const menuButton = document.querySelector(".m-menu");
 const menu = document.querySelector(".menu");
+const sessionDateItem = document.querySelectorAll(".session-date-item");
+const select = document.querySelectorAll(".select");
 
 let cost = 500;
 let totalPrice = 0;
@@ -17,4 +19,20 @@ schemeSvg.addEventListener("click", (event) => {
 menuButton.addEventListener("click", () => {
     menu.classList.toggle("is-open");
     document.body.classList.toggle('overflow');
+});
+
+sessionDateItem.forEach(element => {
+    element.addEventListener("click", () => {
+        sessionDateItem.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        element.classList.add('active');
+    });
+});
+
+select.forEach(element => {
+    element.addEventListener("click", () => {
+        element.classList.toggle('active');
+    });
 });
