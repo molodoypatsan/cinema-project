@@ -36,3 +36,15 @@ select.forEach(element => {
         element.classList.toggle('active');
     });
 });
+
+const selectInput = document.querySelectorAll('.select-input');
+const selectItem = document.querySelectorAll('.select-item');
+
+for (let selectItems of selectItem) {
+        selectItems.addEventListener('click', () => {
+            selectInput.forEach(element => {
+                let selectValue = selectItems.getAttribute('data-value');
+                element.value = selectValue;
+            });
+        });
+}

@@ -195,14 +195,8 @@ body {
   margin-right: 20px;
 }
 
-.select-block {
-  margin-top: 20px;
-}
-
 .select {
   background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   height: 50px;
@@ -212,56 +206,65 @@ body {
 }
 
 .select::after {
-  content: "\1405";
+  content: "";
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translate(0, -50%) rotate(90deg);
+  top: 19px;
   transition: transform 0.3s;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #fff;
 }
 
 .select.active::after {
-  top: 30%;
-  transform: rotate(-90deg);
-}
-
-.select.active {
-  border-radius: 5px 5px 0 0;
+  transform: rotate(-180deg);
 }
 
 .select.active .select-list {
   opacity: 1;
-  transform: scale(1);
+  transform: scaleY(1);
 }
 
 .select-input {
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  border: none;
+  background-color: #621402;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
   outline: none;
   padding: 0 18px;
   cursor: pointer;
-}
-
-.select-input::placeholder {
   color: #fff;
 }
 
+.select.active .select-input {
+  border-radius: 5px 5px 0 0;
+}
+
+.select-input::placeholder {
+  color: inherit;
+}
+
 .select-list {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #621402;
   border: 1px solid rgba(255, 255, 255, 0.5);
   position: absolute;
-  left: -1px;
+  left: 0;
   top: 48px;
-  width: calc(100% + 2px);
+  width: 100%;
   overflow: auto;
   max-height: 300px;
   list-style: none;
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 0;
-  transform: scale(0);
+  transform: scaleY(0);
   transform-origin: center top;
+  z-index: 12;
+}
+
+.select-list::-webkit-scrollbar-thumb {
+  background-color: #000;
+  width: 3px;
 }
 
 .select-item {
